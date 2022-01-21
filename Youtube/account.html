@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta lang="en"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shotcut icon" type="image/png" href="yt.png"/>
+<title>CarTube | Enjoy Cars</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </svg>
+<head>
+    <body>
+        <div class="header">
+            <div class="container">
+            <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html" class="btn">Home <ion-icon name="home-outline"></ion-icon></a></li>
+                    <li><a href="explore.html" class="btn">Explore <ion-icon name="car-sport-outline"></ion-icon></a>
+                    <li><a href="contact.html" class="btn">Contact <ion-icon name="call-outline"></ion-icon></a></li>
+                    <li><a href="collab.html" class="btn">Collabs</a></li>
+                    <a href="account.html" class="btn">Account &#8594;</a>
+                    <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+                </ul>
+            </nav>
+            </div>
+            <!-- acc page -->
+            <div class="account-page">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="signup()">SignUp</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form id="Login">
+                                <input type="text" placeholder="Username">
+                                <input type="text" placeholder="Password">
+                                <button type="submit" class="btn-1">Login</button>
+                            </form>
+                            <form id="Reg">
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Username">
+                                <input type="text" placeholder="Password">
+                                <button type="submit" class="btn-1">Login</button>
+                            </form>
+                        </div>
+                    </div>                  
+                </div>
+                </div>
+            </div>
+        </head>
+        </body>
+        <script>
+            var Login = document.getElementById("Login");
+            var Reg = document.getElementById("Reg");
+            var Indicator = document.getElementById("Indicator");
+
+            function signup(){
+                Reg.style.transform = "translateX(0px)";
+                Login.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+                Reg.style.transform = "translateX(300px)";
+                Login.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+             <!--------- js for toggle menu --------->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight = "200px"
+    }
+    else{
+        MenuItems.style.maxHeight = "0px"
+    }
+    }
+        </script>
+        </html>
